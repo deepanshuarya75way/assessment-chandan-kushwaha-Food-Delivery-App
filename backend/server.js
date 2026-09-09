@@ -14,8 +14,26 @@ import job from "./cron/cron.js";
 const app = express();
 const port = process.env.PORT || 8000;
 
-//middlewaree
-app.use(cors());
+const allowedOrigins = [
+  process.env.FRONTEND_URL,
+  "https://food-delivery-app-knhp.vercel.app",
+  "http://localhost:5173",
+  "http://localhost:5174",
+].filter(Boolean);
+
+// middleware
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin) || origin.endsWith(".vercel.app")) {
+        return callback(null, true);
+      }
+
+      return callback(new Error("CORS origin not allowed"));
+    },
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 //DB connection
