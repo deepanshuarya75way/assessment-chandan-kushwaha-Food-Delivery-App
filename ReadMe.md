@@ -51,8 +51,7 @@ Mern-Eats.com is a full-stack web application that enables users to browse throu
 1. **Clone the repository**:
 
    ```sh
-   git clone https://github.com/rajeevkrS/Food-Delivery-App
-   cd food-delivery-app
+   git clone https://github.com/chandankushwaha89/Food-Delivery-App.git
    ```
 
 2. **Install dependencies in backend and frontend**:
@@ -124,15 +123,15 @@ Here are listed all available API endpoints along with a brief description of ea
 
 ## 👤 Developer
 
-[RAJEEV KUMAR SUDHANSU](https://github.com/rajeevkrS)
+[Chandan kushwaha](https://github.com/chandankushwaha89)
 
 ## 📬 Contact
 
 If you want to contact me, you can reach me through below handles.
 
-<a href="https://www.linkedin.com/in/rajeev-kumar-sudhansu-b52027326/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
+<a href="https://www.linkedin.com/in/chandan-kushwaha08/" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/></a>
 
-<a href="mailto:rajeevkumarr1221@gmail.com"><img  alt="Gmail" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+<a href="mailto:chandankushwaha8953@gmail.com"><img  alt="Gmail" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" /></a>
 
 ## Contribution:
 
