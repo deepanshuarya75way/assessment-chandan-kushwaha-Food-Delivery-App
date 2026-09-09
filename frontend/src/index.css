@@ -10,7 +10,8 @@
 
 body {
   min-height: 100vh;
-  background-color: antiquewhite;
+  background: linear-gradient(180deg, #fffaf6 0%, #fff1eb 100%);
+  color: #2f3b5b;
 }
 
 a {
@@ -19,8 +20,13 @@ a {
 }
 
 .app {
-  width: 80%;
+  width: min(1200px, 80%);
   margin: auto;
+  min-height: calc(100vh - 260px);
+}
+
+.page-shell {
+  padding: 24px 0 10px;
 }
 
 @keyframes fadeIn {

@@ -7,6 +7,7 @@ import userRouter from "./routes/userRoute.js";
 import "dotenv/config";
 import cartRouter from "./routes/cartRoute.js";
 import orderRouter from "./routes/orderRoute.js";
+import contactRouter from "./routes/contactRoute.js";
 import job from "./cron/cron.js";
 
 //app config
@@ -29,6 +30,7 @@ app.use("/images", express.static("uploads")); //access of uploaded images from 
 app.use("/api/user", userRouter);
 app.use("/api/cart", cartRouter);
 app.use("/api/order", orderRouter);
+app.use("/api/contact", contactRouter);
 
 app.get("/", (req, res) => {
   res.send("API Working");

@@ -30,6 +30,11 @@
   font-size: 1.3vw;
 }
 
+#view-menu-button{
+  cursor: pointer;
+  
+}
+
 .header-contents button {
   border: none;
   color: #747474;

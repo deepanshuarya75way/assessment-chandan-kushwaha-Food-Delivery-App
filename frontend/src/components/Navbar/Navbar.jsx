@@ -36,44 +36,58 @@ const Navbar = ({ setShowLogin }) => {
     navigate("/");
   };
 
+  const openHome = (event) => {
+    event.preventDefault();
+    setMenu("home");
+    navigate("/");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const openMenu = (event) => {
+    event.preventDefault();
+    setMenu("menu");
+    navigate("/");
+
+    window.setTimeout(() => {
+      document.getElementById("explore-menu")?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    }, 0);
+  };
+
   return (
     <div className="navbar" ref={navRef}>
-      <Link to={"/"} className="logo">
-        MernEats.com
+      <Link to={"/"} onClick={openHome} className="logo">
+        FoodZone
       </Link>
 
       <ul className="navbar-menu">
         <Link
           to="/"
-          onClick={() => setMenu("home")}
+          onClick={openHome}
           className={menu === "home" ? "active" : ""}
         >
           home
         </Link>
 
         <a
-          href="#explore-menu"
-          onClick={() => setMenu("menu")}
+          href="/#explore-menu"
+          onClick={openMenu}
           className={menu === "menu" ? "active" : ""}
         >
           menu
         </a>
 
-        <a
-          href="#app-download"
-          onClick={() => setMenu("mobile-app")}
-          className={menu === "mobile-app" ? "active" : ""}
-        >
-          mobile-app
-        </a>
+       
 
-        <a
-          href="#footer"
+        <Link
+          to="/contact"
           onClick={() => setMenu("contact us")}
           className={menu === "contact us" ? "active" : ""}
         >
           contact us
-        </a>
+        </Link>
       </ul>
 
       <div className="navbar-right">

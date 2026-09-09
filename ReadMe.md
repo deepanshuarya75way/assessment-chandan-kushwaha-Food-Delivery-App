@@ -78,7 +78,18 @@ Mern-Eats.com is a full-stack web application that enables users to browse throu
    # for razorpay payment
    RAZORPAY_KEY_ID= your razorpay key id
    RAZORPAY_KEY_SECRET= your razorpay key secret
+
+   # for Contact Us email notifications
+   MAIL_HOST=smtp.gmail.com
+   MAIL_PORT=465
+   MAIL_USER=your_email@gmail.com
+   MAIL_PASSWORD=your_gmail_app_password
+   MAIL_FROM=FoodZone <your_email@gmail.com>
+   MAIL_TO=your_email@gmail.com
    ```
+
+   Copy `backend/.env.example` to `backend/.env` and replace the placeholder
+   values. For Gmail, use a Google App Password instead of your normal password.
 
 4. **Run the application**:
    In the `backend` directory, start the server:
@@ -109,6 +120,7 @@ Here are listed all available API endpoints along with a brief description of ea
 - `POST /api/order/userorders`: all orders of particular user
 - `GET /api/order/list`: get orders of all users
 - `POST /api/order/status`: update status of all orders
+- `POST /api/contact/submit`: save a contact message and send an email notification
 
 ## 👤 Developer
 
