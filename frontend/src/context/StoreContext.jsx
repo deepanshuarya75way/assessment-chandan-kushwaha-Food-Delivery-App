@@ -7,7 +7,9 @@ export const StoreContext = createContext(null);
 const StoreContextProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState({});
 
-  const url = import.meta.env.VITE_APP_BACKEND_URL || "http://localhost:8000";
+  const url = (
+    import.meta.env.VITE_APP_BACKEND_URL || "http://localhost:8000"
+  ).replace(/\/+$/, "");
 
   const [token, setToken] = useState("");
   const [food_list, setFoodList] = useState(defaultFoodList);
